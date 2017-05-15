@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h1>{{ site.name }}</h1>
+  <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li {%- if page.category == "original" -%} class="activate" {%- endif -%}>yczp</li>
+      <li {%- if page.category == "symrec" -%} class="active" {%- endif -%}>jxyly</li>
+      <li {%- if page.category == "chmrec" -%} class="active" {%- endif -%}>snyly</li>
+      <li {%- if page.category == "about" -%} class="active" {%- endif -%}>gy</li>
+    </ul>
+  </nav>
+</div>

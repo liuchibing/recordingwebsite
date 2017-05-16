@@ -13,10 +13,13 @@
 
     <style>
         body {
-            position: relative
+            position: relative;
+        }
+        .jumbotron li {
+            padding-left: 15px;
         }
     </style>
 	
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }}{% if page.title %}-{% endif %}{{ site.name }}</title>
 
 </head>

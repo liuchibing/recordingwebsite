@@ -1,9 +1,0 @@
-<div class="jumbotron">
-  <h1>{{ site.name }}</h1>
-</div>
-<ul class="nav nav-tabs">
-  <li {% if page.category == "original" %} class="active" {% endif %}><a>yczp</a></li>
-  <li {% if page.category == "symrec" %} class="active" {% endif %}><a>jxyly</a></li>
-  <li {% if page.category == "chmrec" %} class="active" {% endif %}><a>snyly</a></li>
-  <li {% if page.category == "about" %} class="active" {% endif %}><a>gy</a></li>
-</ul>

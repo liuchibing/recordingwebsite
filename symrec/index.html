@@ -1,0 +1,15 @@
+---
+layout: default
+title: 交响乐录音
+category: symrec
+---
+
+{% for post in site.categories.symrec %}
+<div>
+  <img src="/img/{{ post.img }}" float="left" style="vertical-align: middle" height="50" width="50" />
+  <div style="vertical-align: middle">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.excerpt }}...<a href="{{ post.url }}">详细</a></p>
+  </div>
+</div>
+{% endfor %}

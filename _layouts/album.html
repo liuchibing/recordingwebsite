@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="container">
+      {% include header.html %}
+      <div class="col-xs-12 col-md-4">
+        <img src="/img/{{ page.img }}" height="200" width="200" />
+      </div>
+      <div class="col-xs-12 col-md-8">
+	<h1>{{ page.title }}</h1>
+	<p>{{ page.content }}</p>
+      </div>
+      <div class="col-xs-12 col-md-8 col-md-offset-4">
+	<div class="list-group">
+	  {% for piece in post.pieces %}
+	  <div class="list-group-item">
+	    <audio controls="controls">
+	      <source src="song.mp3" type="audio/mp3" />
+	      <embed height="100" width="100" src="song.mp3" />
+	    </audio>
+	  </div>
+	  {% endfor %}
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

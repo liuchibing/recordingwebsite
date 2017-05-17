@@ -1,9 +1,8 @@
-<div class="jumbotron" style="margin-bottom: 0">
-    <div>
-        <h1>{{ site.name }}</h1>
-    </div>
+<div>  
+  <h1>{{ site.name }}</h1>
 </div>
 <ul class="nav nav-tabs">
+  <li {% if page.category == "home" %} class="active" {% endif %}><a href="/"><span class="glyphicon glyphicon-home"></span>
     <li {% if page.category == "original" %} class="active" {% endif %}><a href="/original">原创作品</a></li>
     <li {% if page.category == "symrec" %} class="active" {% endif %}><a href="/symrec">交响乐录音</a></li>
     <li {% if page.category == "chmrec" %} class="active" {% endif %}><a href="/chmrec">室内乐录音</a></li>

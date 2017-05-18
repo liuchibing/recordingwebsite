@@ -1,13 +1,31 @@
 ---
 layout: default
-title: 交响乐录音
-category: symrec
+title: 原创作品
+category: original
 ---
 
+<style>
+  .desc {
+  height: 4.284em;
+  overflow: hidden;
+  }
+  .dot {
+  background: white;
+  padding-left: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  }
+  img {
+  vertical-align: middle;
+  margin-right: 10px;
+  }
+</style>
+
 {% for post in site.categories.symrec %}
-  <img src="/img/{{ post.img }}" align="left" style="vertical-align: middle; margin-top: 10px" height="100" width="100" />
+  <a  href="{{ post.url }}"><img src="/img/{{ post.img }}" align="left" height="100" width="100" /></a>
   <div style="vertical-align: middle">
-    <h4>{{ post.title }}</h4>
-    <p>{{ post.excerpt }}...<a href="{{ post.url }}">详细</a></p>
+    <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    <p class="desc">{{ post.excerpt }}</p><p class="dot">...<a href="{{ post.url }}">详细</a></p>
   </div>
 {% endfor %}

@@ -4,30 +4,4 @@ title: 室内乐录音
 category: chmrec
 ---
 
-<style>
-  .desc {
-  height: 4.284em;
-  overflow: hidden;
-  }
-  .dot {
-  background: white;
-  padding-left: 10px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  }
-  img {
-  vertical-align: middle;
-  margin-right: 10px;
-  }
-</style>
-
-{% for post in site.categories.chmrec %}
-<div>
-  <a  href="{{ post.url }}"><img src="/img/{{ post.img }}" align="left" height="100" width="100" /></a>
-  <div style="vertical-align: middle">
-    <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-    <p class="desc">{{ post.excerpt }}</p><p class="dot">...<a href="{{ post.url }}">详细</a></p>
-  </div>
-</div>
-{% endfor %}
+{% include album_list.html posts=site.categories.chmrec %}

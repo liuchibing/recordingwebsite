@@ -1,35 +1,5 @@
-<style>
-    .desc {
-        height: 4.284em;
-        overflow: hidden;
-    }
-
-    .dot {
-        background: white;
-        padding-left: 10px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-
-    img {
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-
-    .item, hr {
-        clear: left;
-    }
-    
-</style>
+{% include album_list_style.html %}
 
 {% for post in include.posts %}
-<div class="item">
-    <a href="{{ post.url }}"><img src="/img/{{ post.img }}" align="left" height="100" width="100" /></a>
-    <div style="vertical-align: middle">
-        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-        <p>{{ post.excerpt | truncate: 150 }}<a href="{{ post.url }}">详细</a></p>
-    </div>
-</div>
-<hr />
+{% include album_list_item.html item=post%}
 {% endfor %}

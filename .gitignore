@@ -4,3 +4,4 @@ _site/
 jekyllserver.bat
 .vs/
 *~
+_temp/

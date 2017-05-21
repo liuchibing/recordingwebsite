@@ -22,7 +22,7 @@
 <script>
     $(document).ready(function () {
         $(".more").click(function () {
-            $(".tab-pane.active > div").toggleClass("height");
+            $(".tab-pane.active > p").toggleClass("height");
             if ($(".tab-pane.active > .more").text() == "[展开]") {
                 $(".tab-pane.active > .more").text("[收起]");
             } else {
@@ -36,7 +36,7 @@
     <div class="container" style="margin-top: 10px">
         <div class="row">
             <div class="col-xs-12 col-md-4">
-                <img src="/img/{{ page.img }}" style="width: 100%; margin: auto" alt="{{ page.title }}" />
+                <img src="/img/{{ page.img }}" width="200px" height="200px" align="middle" alt="{{ page.title }}" />
             </div>
             <div class="col-xs-12 col-md-8">
                 <h1>{{ page.title }}</h1>
@@ -47,36 +47,38 @@
                 </ul>
                 <div class="tab-content" style="margin-top: 10px">
                     <div id="intro" class="tab-pane active">
-                        <div class="height">{{ page.description[0] }}</div>
+                        <p class="height">{{ page.description[0] }}</p>
                         <div class="more btn btn-link">[展开]</div>
                     </div>
                     <div id="artists" class="tab-pane">
-                        <div class="height">{{ page.description[1] }}</div>
+                        <p class="height">{{ page.description[1] }}</p>
                         <div class="more btn btn-link">[展开]</div>
                     </div>
                     <div id="recnotes" class="tab-pane">
-                        <div class="height">{{ page.description[2] }}</div>
+                        <p class="height">{{ page.description[2] }}</p>
                         <div class="more btn btn-link">[展开]</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-md-8 col-md-offset-4">
-            <div class="list-group">
-                <div class="list-group-item active">
-                    曲目
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-4">
+                <div class="list-group">
+                    <div class="list-group-item active">
+                        曲目
+                    </div>
+                    {% for piece in page.pieces %}
+                    <div class="list-group-item">
+                        {{ piece.name }}
+                        <audio controls="controls">
+                            {% for audio in piece.audios %}
+                            <source src="/audio/{{ audio.filename }}" type="audio/{{ audio.type }}" />
+                            {% endfor %}
+                            <embed width="100" src="/audio/{{ audios[1].filename }}" />
+                        </audio>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% for piece in page.pieces %}
-                <div class="list-group-item">
-                    {{ piece.name }}
-                    <audio controls="controls">
-                        {% for audio in piece.audios %}
-                        <source src="/audio/{{ audio.filename }}" type="audio/{{ audio.type }}" />
-                        {% endfor %}
-                        <embed width="100" src="/audio/{{ audios[1].filename }}" />
-                    </audio>
-                </div>
-                {% endfor %}
             </div>
         </div>
     </div>

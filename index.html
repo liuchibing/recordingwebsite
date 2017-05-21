@@ -62,7 +62,10 @@ category: home
                 </div>
                 <div>
                     <h2>最新原创作品</h2>
-                    <div class="list_item">
+                    {% for post in site.categories.original limit:2 %}
+                    {% include album_list_item item=post %}
+                    {% endfor %}
+                    <!--<div class="list_item">
                         <a href="{{ site.categories.original[0].url }}"><img src="/img/{{ site.categories.original[0].img }}" align="left" height="100" width="100" alt="{{ site.categories.original[0].title }}" /></a>
                         <div style="vertical-align: middle">
                             <h4><a href="{{ site.categories.original[0].url }}">{{ site.categories.original[0].title }}</a></h4>
@@ -77,11 +80,14 @@ category: home
                             <p>{{ site.categories.original[1].excerpt | truncate: 150 }}<a href="{{ site.categories.original[1].url }}">详细</a></p>
                         </div>
                     </div>
-                    <hr />
+                    <hr /> -->
                 </div>
                 <div>
                     <h2>最新交响乐录音</h2>
-                    <div class="list_item">
+                    {% for post in site.categories.symrec limit:2 %}
+                    {% include album_list_item item=post %}
+                    {% endfor %}
+                    <!--<div class="list_item">
                         <a href="{{ site.categories.symrec[0].url }}"><img src="/img/{{ site.categories.symrec[0].img }}" align="left" height="100" width="100" alt="{{ site.categories.symrec[0].title }}" /></a>
                         <div style="vertical-align: middle">
                             <h4><a href="{{ site.categories.symrec[0].url }}">{{ site.categories.symrec[0].title }}</a></h4>
@@ -96,11 +102,14 @@ category: home
                             <p>{{ site.categories.symrec[1].excerpt | truncate: 150 }}<a href="{{ site.categories.symrec[1].url }}">详细</a></p>
                         </div>
                     </div>
-                    <hr />
+                    <hr />-->
                 </div>
                 <div>
                     <h2>最新室内乐录音</h2>
-                    <div class="list_item">
+                    {% for post in site.categories.chmrec limit:2 %}
+                    {% include album_list_item item=post %}
+                    {% endfor %}
+                    <!--<div class="list_item">
                         <a href="{{ site.categories.chmrec[0].url }}"><img src="/img/{{ site.categories.chmrec[0].img }}" align="left" height="100" width="100" alt="{{ site.categories.chmrec[0].title }}" /></a>
                         <div style="vertical-align: middle">
                             <h4><a href="{{ site.categories.chmrec[0].url }}">{{ site.categories.chmrec[0].title }}</a></h4>
@@ -115,7 +124,7 @@ category: home
                             <p>{{ site.categories.chmrec[1].excerpt | truncate: 150 }}<a href="{{ site.categories.chmrec[1].url }}">详细</a></p>
                         </div>
                     </div>
-                    <hr />
+                    <hr />-->
                 </div>
             </div>
         </div>

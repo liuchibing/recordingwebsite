@@ -1,7 +1,6 @@
 _site/
 .sass-cache/
 .jekyll-metadata
-jekyllserver.bat
 .vs/
 *~
 _temp/

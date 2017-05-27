@@ -73,7 +73,7 @@
                         {% for audio in piece.audios %}
                         <source src="/audio/{{ audio.filename }}" type="audio/{{ audio.type }}" />
                         {% endfor %}
-                        <embed width="100" src="/audio/{{ audios[1].filename }}" />
+                        <embed width="100" src="/audio/{{ audios[0].filename }}" />
                     </audio>
                 </div>
                 {% endfor %}

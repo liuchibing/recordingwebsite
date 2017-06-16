@@ -29,23 +29,23 @@ category: home
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="/img/{{ site.posts[0].carousel }}" alt="{{ site.posts[0].title }}" style="height: 300px; margin: auto">
-                            <div class="carousel-caption">
+                            <a href="{{ site.posts[0].url }}"><img src="/img/{{ site.posts[0].carousel }}" alt="{{ site.posts[0].title }}" style="height: 300px; margin: auto"></a>
+                            <!--<div class="carousel-caption">
                                 <a href="{{ site.posts[0].url }}">
                                     <h3>{{ site.posts[0].title }}</h3>
                                     <p>{{ site.posts[0].excerpt | truncate: 65 }}</p>
                                 </a>
-                            </div>
+                            </div>-->
                         </div>
                         {% for post in site.posts offset:1 limit:5 %}
                         <div class="item">
-                            <img src="/img/{{ post.carousel }}" alt="{{ post.title }}" style="height: 300px; margin: auto">
-                            <div class="carousel-caption">
+                            <a href="{{ post.url }}"><img src="/img/{{ post.carousel }}" alt="{{ post.title }}" style="height: 300px; margin: auto"></a>
+                            <!--<div class="carousel-caption">
                                 <a href="{{ post.url }}">
                                     <h3>{{ post.title }}</h3>
                                     <p>{{ post.excerpt | truncate: 65 }}</p>
                                 </a>
-                            </div>
+                            </div>-->
                         </div>
                         {% endfor %}
                     </div>

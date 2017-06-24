@@ -69,7 +69,7 @@
                 {% for piece in page.pieces %}
                 <div class="list-group-item">
                     {{ piece.name }}
-                    <audio controls="controls">
+                    <audio controls="controls" controlsList="nodownload">
                         {% for audio in piece.audios %}
                         <source src="/audio/{{ audio.filename }}" type="audio/{{ audio.type }}" />
                         {% endfor %}

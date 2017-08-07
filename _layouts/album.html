@@ -73,7 +73,7 @@
                         {% for audio in piece.audios %}
                         <source src="{% unless page.audio-prefix %}/audio/{% else %}{{ page.audio-prefix }}{% endunless %}{{ audio.filename }}" type="audio/{{ audio.type }}" />
                         {% endfor %}
-                        <embed width="100" src="{% unless page.audio-prefix %}/audio/{% else %}{{ page.audio-prefix }}{% endunless %}{{ audios[0].filename }}" />
+                        <embed width="100" src="{% unless page.audio-prefix %}/audio/{% else %}{{ page.audio-prefix }}{% endunless %}{{ piece.audios[0].filename }}" />
                     </audio>
                 </div>
                 {% endfor %}

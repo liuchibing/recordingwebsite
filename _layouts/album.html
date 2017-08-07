@@ -71,7 +71,7 @@
                     {{ piece.name }}
                     <audio controls="controls" controlsList="nodownload">
                         {% for audio in piece.audios %}
-                        <source src="{% unless audio-prefix %}/audio/{% else %}{{ audio-prefix }}{% endunless %}{{ audio.filename }}" type="audio/{{ audio.type }}" />
+                        <source src="{% unless page.audio-prefix %}/audio/{% else %}{{ page.audio-prefix }}{% endunless %}{{ audio.filename }}" type="audio/{{ audio.type }}" />
                         {% endfor %}
                         <embed width="100" src="{% unless audio-prefix %}/audio/{% else %}{{ audio-prefix }}{% endunless %}{{ audios[0].filename }}" />
                     </audio>
